@@ -1,17 +1,20 @@
 @charset "UTF-8";
-/*!
- * Copyright 2015 Drifty Co.
- * http://drifty.com/
- *
- * Ionic, v1.3.1
- * A powerful HTML5 mobile app framework.
- * http://ionicframework.com/
- *
- * By @maxlynch, @benjsperry, @adamdbradley <3
- *
- * Licensed under the MIT license. Please see LICENSE for more information.
- *
- */
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
@@ -25,8 +28,8 @@
 */
 @font-face {
   font-family: "Ionicons";
-  src: url("../fonts/ionicons.eot?v=2.0.1");
-  src: url("../fonts/ionicons.eot?v=2.0.1#iefix") format("embedded-opentype"), url("../fonts/ionicons.ttf?v=2.0.1") format("truetype"), url("../fonts/ionicons.woff?v=2.0.1") format("woff"), url("../fonts/ionicons.woff") format("woff"), url("../fonts/ionicons.svg?v=2.0.1#Ionicons") format("svg");
+  src: url("../lib/ionic/fonts/ionicons.eot?v=2.0.1");
+  src: url("../lib/ionic/fonts/ionicons.eot?v=2.0.1#iefix") format("embedded-opentype"), url("../lib/ionic/fonts/ionicons.ttf?v=2.0.1") format("truetype"), url("../lib/ionic/fonts/ionicons.woff?v=2.0.1") format("woff"), url("../lib/ionic/fonts/ionicons.woff") format("woff"), url("../lib/ionic/fonts/ionicons.svg?v=2.0.1#Ionicons") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -3335,8 +3338,8 @@ body,
   color: #000;
   word-wrap: break-word;
   font-size: 14px;
-/*  font-family: -apple-system;
-  font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;*/
+  font-family: -apple-system;
+  font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
   line-height: 20px;
   text-rendering: optimizeLegibility;
   -webkit-backface-visibility: hidden;
@@ -3557,6 +3560,7 @@ ion-infinite-scroll {
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: #fff;
   overflow: hidden; }
 
 .view-container {
@@ -3589,8 +3593,9 @@ cite {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #000;
   font-weight: 500;
-/*  font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;*/
+  font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
   line-height: 1.2; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
   .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
@@ -7736,7 +7741,7 @@ input[type="color"] {
   padding-top: 2px;
   padding-left: 0;
   height: 34px;
-  color: #ecf0f1;
+  color: #111;
   vertical-align: middle;
   font-size: 14px;
   line-height: 16px; }
@@ -7824,13 +7829,13 @@ textarea::-webkit-input-placeholder {
   color: #aaaaaa;
   text-indent: 0; }
 
-input,
+input[disabled],
 select[disabled],
 textarea[disabled],
 input[readonly]:not(.cloned-text-input),
 textarea[readonly]:not(.cloned-text-input),
 select[readonly] {
-  background-color: #2c3e50;
+  background-color: #f8f8f8;
   cursor: not-allowed; }
 
 input[type="radio"][disabled],
@@ -9809,3 +9814,10 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+.scroll {
+  height: 100%; }
+
+#map {
+  width: 100%;
+  height: 100%; }

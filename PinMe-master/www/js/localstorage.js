@@ -1,3 +1,6 @@
+var app = angular.module('ionicApp', ['ionic', 'ionic-ratings', 'tabSlideBox', 'ngCordova']);
+
+
 app.factory('$localStorage', ['$window', function ($window) {
     return {
         set: function (key, value) {

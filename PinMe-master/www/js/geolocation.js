@@ -1,3 +1,5 @@
+var app = angular.module('ionicApp', ['ionic', 'ionic-ratings', 'tabSlideBox', 'ngCordova']);
+
 // fall back
 app.constant('defaultLocalisation', {
     'longitude': 6.1799699326036,
